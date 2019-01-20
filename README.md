@@ -13,7 +13,7 @@ The Project
 ---
 
 * The complete code for the project is contained in jupyter notebook titled as **FindingLanes.ipynb**
-* A writeup explaining various steps of the project is also included titled as **writeup.md**
+* A writeup explaining various steps of the project is also included titled as **writeup.md**. This is a great place to start to understand the project.
 * To run the project successfully install the following python dependencies:
     * numpy
     * matplotlib
