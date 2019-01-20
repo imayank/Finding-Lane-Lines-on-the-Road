@@ -16,7 +16,7 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. Lane Detection Pipeline
 
 The pipeline has the following steps:
 * **Color Masking:** This is an optional step. First, the results are obtained without applying the color mask. The results are 
@@ -37,7 +37,7 @@ distinguishable in HSL color space in bright sunlight and shadows.
 
 * **Combining:** The line segments image is combined with original image to produce final result.
 
-Modification to *draw_lines()* function to extrapolate line:
+Overview to *draw_lines()* function to extrapolate line over lane using detected line segments:
 
 * **Seperating line segments:** The line segments are seperated as belonging to left lane and right lane based on their slope values. Positively sloped line segments belong to right lane and negatively sloped line segments belong to left lane.
 
@@ -52,7 +52,7 @@ Weight of a line segment is an increasing function of its eucledian length. The 
 
 * **Drawing line:** Finally the lines are drawn using the avereged parameters obtained above. The y-coordinate values are chosen and corresponding x-coordinate values are obtained using the parameters determined above.
 
-### 2. Identify potential shortcomings with your current pipeline
+### 2. Shortcomings
 
 I believe this is very basic lane detection mechanism and needs improvement:
 
@@ -62,8 +62,7 @@ I believe this is very basic lane detection mechanism and needs improvement:
 * **Traffic:** If there is lot of traffic on the road it may affect the result, especially if the vehicles ahead are covering the lane markings the result will not be very good.
 
 
-### 3. Suggest possible improvements to your pipeline
-
+### 3.Improvements
 Improvements:
  
  * **Non linear polynomials:** Instead of fitting straight lines, several non linear polynomials can be tried and based on the value of residuals appropriate degree polynomial can be chosen to represent the lane markings.
